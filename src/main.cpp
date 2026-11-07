@@ -18,7 +18,7 @@ int main() {
 
     std::cout << "Bienvenido al ticket" << std::endl;
 
-    nombre = leerTexto("cual es el producto: ");
+    nombre = leerCadena ("cual es el producto: ");
     while (nombre == "") {
         std::cout << "El nombre no puede estar vacio." << std::endl;
         nombre = leerTexto("cual es el producto: ");
