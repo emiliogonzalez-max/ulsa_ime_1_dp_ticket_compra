@@ -39,21 +39,22 @@ Sobre lo que queda después del descuento. El descuento baja el precio real de l
 Muestra un mensaje de error y vuelve a pedir el dato con un ciclo `while`. Lo repite hasta que el dato sea válido, y no sigue con el cálculo antes de eso.
 
 **¿Puede el total salir negativo? ¿Por qué?**
-_____
-
+No. El descuento máximo es 100 %, así que el descuento nunca es mayor que el subtotal. Entonces `subtotal - descuento` nunca baja de 0, y el IVA tampoco es negativo.
+ 
 **Invariante 1** (después del ciclo que valida el precio, ¿qué es siempre cierto sobre `precio`?):
-_____
-
+`precio > 0`. El ciclo no termina hasta que se cumple.
+ 
 **Invariante 2** (¿qué relación se cumple siempre entre el subtotal, el descuento, el IVA y el total?):
-_____
-
+`total = subtotal - descuento + IVA`
+ 
 ## 4. Casos resueltos a mano (Fase 1)
-
+ 
 | Caso | Nombre | Precio | Cantidad | Descuento (%) | Subtotal | Descuento ($) | IVA | Total |
 |---|---|---|---|---|---|---|---|---|
-| 1 (sin descuento) | _____ | _____ | _____ | _____ | _____ | _____ | _____ | _____ |
-| 2 (con descuento) | _____ | _____ | _____ | _____ | _____ | _____ | _____ | _____ |
-| 3 (precio con centavos) | _____ | _____ | _____ | _____ | _____ | _____ | _____ | _____ |
+| 1 (sin descuento) | Cuaderno | 100.00 | 1 | 0 | 100.00 | 0.00 | 16.00 | 116.00 |
+| 2 (con descuento) | Cuaderno | 50.00 | 2 | 10 | 100.00 | 10.00 | 14.40 | 104.40 |
+| 3 (precio con centavos) | Lapiz | 19.99 | 1 | 0 | 19.99 | 0.00 | 3.20 | 23.19 |
+
 
 ## 5. Tipo de dato abstracto (Fase 1)
 
