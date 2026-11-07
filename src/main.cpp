@@ -1,14 +1,3 @@
-// Práctica: Ticket de compra
-// main() solo coordina: pide los datos, llama a los módulos y muestra el ticket.
-// Deja el comentario "// Paso N" sobre cada bloque, con la numeración de TU receta.
-//
-// Compilar (desde la carpeta del proyecto):
-//   g++ -Wall -Wextra -std=c++17 -Iinclude src/main.cpp -o ticket
-// Ejecutar:
-//   macOS:   ./ticket
-//   Windows: .\ticket.exe
-
-// ¿Recuerdas qué hace iostream?
 #include <iostream>
 #include <string>
 
@@ -16,22 +5,50 @@
 #include "ticket.h"
 
 int main() {
-    // Variables (siempre inicializadas)
-    // TODO: ¿cuántas necesitas? ¿De qué tipo es cada una?
+    std::string nombre = "";
+    double precio = 0.0;
+    int cantidad = 0;
+    double porcentajeDescuento = 0.0;
 
-    // Paso 1: mensaje de bienvenida
-    // TODO
+    double subtotal = 0.0;
+    double descuento = 0.0;
+    double base = 0.0;
+    double iva = 0.0;
+    double total = 0.0;
 
-    // Paso 2: pedir y validar los datos
-    // TODO: ¿qué función de utilerias.h usas para cada dato?
-    //       ¿Cómo vuelves a pedir un dato que está fuera de rango?
+    std::cout << "Bienvenido a mi programa" << std::endl;
 
-    // Paso 3: calcular los importes llamando a los módulos de ticket.h
-    // TODO
+    nombre = leerTexto("Nombre del producto: ");
+    while (nombre == "") {
+        std::cout << "El nombre no puede estar vacio." << std::endl;
+        nombre = leerTexto("Nombre del producto: ");
+    }
 
-    // Paso 4: imprimir el ticket
-    // TODO
+    precio = leerDouble("Precio: ");
+    while (precio <= 0) {
+        std::cout << "El precio debe ser mayor que 0." << std::endl;
+        precio = leerDouble("Precio: ");
+    }
 
-    // ¿Qué significa return 0;?
+    cantidad = leerEntero("Cantidad: ");
+    while (cantidad <= 0) {
+        std::cout << "La cantidad debe ser mayor que 0." << std::endl;
+        cantidad = leerEntero("Cantidad: ");
+    }
+
+    porcentajeDescuento = leerDouble("Descuento (%): ");
+    while (porcentajeDescuento < 0 || porcentajeDescuento > 100) {
+        std::cout << "El descuento debe estar entre 0 y 100." << std::endl;
+        porcentajeDescuento = leerDouble("Descuento (%): ");
+    }
+
+    subtotal = calcularSubtotal(precio, cantidad);
+    descuento = calcularDescuento(subtotal, porcentajeDescuento);
+    base = subtotal - descuento;
+    iva = calcularIVA(base);
+    total = base + iva;
+
+    imprimirTicket(nombre, cantidad, precio, subtotal, descuento, iva, total);
+
     return 0;
 }
