@@ -1,44 +1,42 @@
 # Práctica: Ticket de compra
-
+ 
 > Llena cada sección en la fase que se indica. Las instrucciones completas están en `PRACTICA.md`.
 > Si una pregunta no aplica (por ejemplo, no hiciste el Experimento C o no tuviste dudas), escribe `No aplica`. Si te sobran filas en una tabla, bórralas.
-
+ 
 ## 1. Descripción del problema (Fase 1)
-<!-- Explica con tus palabras qué hace tu programa y para qué serviría en la vida real. Máximo 4 líneas. -->
-
-_____
-
+ 
+Mi programa pide los datos de un producto (nombre, precio, cantidad y descuento), revisa que sean válidos y calcula cuánto debe pagar el cliente. Al final muestra un ticket con el subtotal, el descuento, el IVA y el total. Serviría en la caja de una tienda pequeña para no hacer las cuentas a mano.
+ 
 ## 2. Entradas y salidas (Fase 1)
-<!-- Define cada entrada y cada salida, con su tipo de dato y la función de utilerias.h con la que la vas a leer. -->
-
+ 
 **Entradas:**
-
+ 
 | Entrada | Tipo de dato | Función de `utilerias.h` |
 |---|---|---|
-| _____ | _____ | _____ |
-| _____ | _____ | _____ |
-| _____ | _____ | _____ |
-| _____ | _____ | _____ |
-
+| Nombre del producto | `std::string` | `leerTexto` |
+| Precio | `double` | `leerDouble` |
+| Cantidad | `int` | `leerEntero` |
+| Descuento (%) | `double` | `leerDouble` |
+ 
 **Salida** (¿qué datos muestra el ticket?):
-_____
-
+El nombre del producto, la cantidad, el precio, el subtotal, el descuento, el IVA, el total y la línea "Le atendio:" con mi nombre.
+ 
 **¿El IVA se calcula sobre el subtotal o sobre lo que queda después del descuento? ¿Por qué?**
-_____
-
+Sobre lo que queda después del descuento. El descuento baja el precio real de la venta, y el IVA es un impuesto sobre lo que de verdad se vende. Por ejemplo, con subtotal 100 y descuento 10, el IVA es el 16 % de 90, o sea 14.40, que coincide con la tabla de pruebas.
+ 
 ## 3. Restricciones e invariante (Fases 1 y 2)
-
+ 
 **Restricciones** (¿qué debe cumplirse?):
-
+ 
 | Dato | ¿Qué valores son válidos? | ¿Por qué? |
 |---|---|---|
-| Nombre del producto | _____ | _____ |
-| Precio | _____ | _____ |
-| Cantidad | _____ | _____ |
-| Descuento (%) | _____ | _____ |
-
+| Nombre del producto | Texto que no esté vacío | Un ticket sin nombre no dice qué se compró |
+| Precio | Número mayor que 0 | Un producto no puede costar 0 ni tener precio negativo |
+| Cantidad | Entero mayor que 0 | No se pueden comprar 0 piezas, ni piezas negativas, ni media pieza |
+| Descuento (%) | Número de 0 a 100 | Menos de 0 sería un recargo, y más de 100 dejaría un total negativo |
+ 
 **¿Qué hace mi programa si el usuario escribe un dato fuera de rango?**
-_____
+Muestra un mensaje de error y vuelve a pedir el dato con un ciclo `while`. Lo repite hasta que el dato sea válido, y no sigue con el cálculo antes de eso.
 
 **¿Puede el total salir negativo? ¿Por qué?**
 _____
