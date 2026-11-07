@@ -324,29 +324,29 @@ Lo encontré probando con un descuento de 10 % y mostrando valores intermedios c
 
 ## 20. Commits (Fase 5)
 
-**¿Cuántos commits hice durante la práctica?** _____
+**¿Cuántos commits hice durante la práctica?** 12
 
 **Si hice menos de 3, ¿por qué?**
-_____
+no 
 
 ## 21. Lista de verificación antes de entregar (Fase 5)
 
-- [ ] Llené las secciones 1 a 20 (no quedan `_____`; escribí `No aplica` donde corresponde)
-- [ ] Completé el árbol de análisis descendente y la tabla de módulos
-- [ ] Escribí en `RECETA.md` la receta de `main` y la de cada módulo, antes de programar
-- [ ] Cada bloque de `main.cpp` tiene su comentario `// Paso N`, de acuerdo con mi receta
-- [ ] Corregí el error de `calcularDescuento` y documenté cómo lo encontré
-- [ ] Hice los Experimentos A y B y dejé el código correcto al terminar
-- [ ] Mi ticket se ve alineado y termina con la línea "Le atendio:", leída de una constante
-- [ ] Justifiqué dónde definí la constante con mi nombre
-- [ ] Escribí `calcularPorcentaje` y volví a correr todas las pruebas
-- [ ] Hice al menos uno de los retos y lo documenté
-- [ ] No queda ninguna salida `[DEBUG]` activa
-- [ ] Mi programa compila sin advertencias
-- [ ] Probé todos los casos de la tabla
-- [ ] Revisé los principios de calidad de mi programa
-- [ ] No modifiqué `utilerias.h`
-- [ ] Tengo al menos 3 commits con mensajes claros (o justifiqué por qué no)
-- [ ] Hice `git push` y verifiqué mi fork en GitHub
-- [ ] Mi fork se llama `ulsa_ime_1_dp_ticket_compra`, mis módulos están en `include/ticket.h` y mi programa principal en `src/main.cpp`
-- [ ] Entregué el enlace de mi fork en Classroom
+- [x] Llené las secciones 1 a 20 (no quedan `_____`; escribí `No aplica` donde corresponde)
+- [x] Completé el árbol de análisis descendente y la tabla de módulos
+- [x] Escribí en `RECETA.md` la receta de `main` y la de cada módulo, antes de programar
+- [x] Cada bloque de `main.cpp` tiene su comentario `// Paso N`, de acuerdo con mi receta
+- [x] Corregí el error de `calcularDescuento` y documenté cómo lo encontré
+- [x] Hice los Experimentos A y B y dejé el código correcto al terminar
+- [x] Mi ticket se ve alineado y termina con la línea "Le atendio:", leída de una constante
+- [x] Justifiqué dónde definí la constante con mi nombre
+- [x] Escribí `calcularPorcentaje` y volví a correr todas las pruebas
+- [x] Hice al menos uno de los retos y lo documenté
+- [x] No queda ninguna salida `[DEBUG]` activa
+- [x] Mi programa compila sin advertencias
+- [x] Probé todos los casos de la tabla
+- [x] Revisé los principios de calidad de mi programa
+- [x] No modifiqué `utilerias.h`
+- [x] Tengo al menos 3 commits con mensajes claros (o justifiqué por qué no)
+- [x] Hice `git push` y verifiqué mi fork en GitHub
+- [x] Mi fork se llama `ulsa_ime_1_dp_ticket_compra`, mis módulos están en `include/ticket.h` y mi programa principal en `src/main.cpp`
+- [x] Entregué el enlace de mi fork en Classroom
