@@ -16,12 +16,12 @@ int main() {
     double iva = 0.0;
     double total = 0.0;
 
-    std::cout << "Bienvenido a mi programa" << std::endl;
+    std::cout << "Bienvenido al ticket" << std::endl;
 
-    nombre = leerTexto("Nombre del producto: ");
+    nombre = leerTexto("cual es el producto: ");
     while (nombre == "") {
         std::cout << "El nombre no puede estar vacio." << std::endl;
-        nombre = leerTexto("Nombre del producto: ");
+        nombre = leerTexto("cual es el producto: ");
     }
 
     precio = leerDouble("Precio: ");
